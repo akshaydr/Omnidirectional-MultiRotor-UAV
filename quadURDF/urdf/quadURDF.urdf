@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="quadURDF">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-3.6070440149236E-17 -1.47456534203168E-18 0.0125"
+        rpy="0 0 0" />
+      <mass
+        value="0.566521222584605" />
+      <inertia
+        ixx="0.00243159352122455"
+        ixy="-1.18991504556746E-17"
+        ixz="7.48197876172947E-21"
+        iyy="0.00243159352122455"
+        iyz="1.33625404719829E-18"
+        izz="0.0048044927631521" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadURDF/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadURDF/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wrist_link_1">
+    <inertial>
+      <origin
+        xyz="-0.00199615303675466 0.0151173129424723 -7.60189482392172E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0214236730398781" />
+      <inertia
+        ixx="3.75617306882312E-06"
+        ixy="-5.01687977256722E-09"
+        ixz="-9.85896168159331E-23"
+        iyy="3.36475146490776E-06"
+        iyz="-5.81603067114864E-23"
+        izz="3.41564364162765E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadURDF/meshes/wrist_link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadURDF/meshes/wrist_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_joint_1"
+    type="fixed">
+    <origin
+      xyz="-0.275 0 -0.0025"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wrist_link_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="prop_link_1">
+    <inertial>
+      <origin
+        xyz="1.61770873713385E-06 0.00571701126621944 -0.000219313925957254"
+        rpy="0 0 0" />
+      <mass
+        value="0.00282137176688324" />
+      <inertia
+        ixx="2.6492136610578E-08"
+        ixy="-1.72405333636782E-11"
+        ixz="4.11692393855716E-11"
+        iyy="7.34611258663587E-06"
+        iyz="1.13725468372896E-08"
+        izz="7.34126100048224E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadURDF/meshes/prop_link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.67843137254902 0.67843137254902 0.729411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadURDF/meshes/prop_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop_joint_1"
+    type="continuous">
+    <origin
+      xyz="0 0.0317329168374843 0"
+      rpy="0 -0.471058413408267 0" />
+    <parent
+      link="wrist_link_1" />
+    <child
+      link="prop_link_1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="wrist_link_2">
+    <inertial>
+      <origin
+        xyz="-0.0019961530367546 0.0151173129424723 8.98565555219451E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0214236730398781" />
+      <inertia
+        ixx="3.75617306882312E-06"
+        ixy="-5.01687977256778E-09"
+        ixz="-1.59118118960889E-21"
+        iyy="3.36475146490775E-06"
+        iyz="1.8417294699041E-22"
+        izz="3.41564364162765E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadURDF/meshes/wrist_link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadURDF/meshes/wrist_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_joint_2"
+    type="fixed">
+    <origin
+      xyz="0 -0.275 -0.00249999999999979"
+      rpy="1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="wrist_link_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="prop_link_2">
+    <inertial>
+      <origin
+        xyz="3.17591298534814E-06 0.000649830774225972 -0.000438621011574367"
+        rpy="0 0 0" />
+      <mass
+        value="0.00282137047763377" />
+      <inertia
+        ixx="2.64921398104155E-08"
+        ixy="-1.66829666913551E-11"
+        ixz="4.03989272167697E-11"
+        iyy="7.34610885993875E-06"
+        iyz="1.13725550487977E-08"
+        izz="7.34125732415794E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadURDF/meshes/prop_link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.67843137254902 0.67843137254902 0.729411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadURDF/meshes/prop_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop_joint_2"
+    type="fixed">
+    <origin
+      xyz="-0.00010094395060628 0.0368000906666004 0.000194710459261401"
+      rpy="0 -0.471058413408261 0" />
+    <parent
+      link="wrist_link_2" />
+    <child
+      link="prop_link_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="wrist_link_3">
+    <inertial>
+      <origin
+        xyz="-0.00199615303675471 0.0151173129424723 1.85350539290081E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0214236730398781" />
+      <inertia
+        ixx="3.75617306882313E-06"
+        ixy="-5.01687977256737E-09"
+        ixz="-3.15025659654471E-21"
+        iyy="3.36475146490776E-06"
+        iyz="-5.48186262843885E-23"
+        izz="3.41564364162765E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadURDF/meshes/wrist_link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadURDF/meshes/wrist_link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_joint_3"
+    type="fixed">
+    <origin
+      xyz="0.275 0 -0.0025"
+      rpy="1.5707963267949 0 -3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="wrist_link_3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="prop_link_3">
+    <inertial>
+      <origin
+        xyz="3.26752085721971E-06 0.000649829072999437 -0.000438617606276781"
+        rpy="0 0 0" />
+      <mass
+        value="0.00282136770989785" />
+      <inertia
+        ixx="2.64920357130763E-08"
+        ixy="-1.72047110748282E-11"
+        ixz="4.13691210362547E-11"
+        iyy="7.34610439774375E-06"
+        iyz="1.13725070266749E-08"
+        izz="7.34125289631278E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadURDF/meshes/prop_link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.67843137254902 0.67843137254902 0.729411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadURDF/meshes/prop_link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop_joint_3"
+    type="fixed">
+    <origin
+      xyz="-0.00010094395060628 0.0368000906666004 0.000194710459262332"
+      rpy="0 -0.471058413408258 0" />
+    <parent
+      link="wrist_link_3" />
+    <child
+      link="prop_link_3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="wrist_link_4">
+    <inertial>
+      <origin
+        xyz="-0.00199615303675466 -0.0151173129424723 -2.83372844517877E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0214236730398781" />
+      <inertia
+        ixx="3.75617306882312E-06"
+        ixy="5.01687977256657E-09"
+        ixz="4.49504173522522E-21"
+        iyy="3.36475146490775E-06"
+        iyz="1.1860335585263E-22"
+        izz="3.41564364162764E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadURDF/meshes/wrist_link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadURDF/meshes/wrist_link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_joint_4"
+    type="fixed">
+    <origin
+      xyz="0 0.275 -0.0025000000000002"
+      rpy="-1.5707963267949 0 -1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="wrist_link_4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="prop_link_4">
+    <inertial>
+      <origin
+        xyz="3.12714303801753E-06 0.000649836928872216 -0.000438632776560408"
+        rpy="0 0 0" />
+      <mass
+        value="0.00282137890672256" />
+      <inertia
+        ixx="2.64923452221767E-08"
+        ixy="-1.65206989265725E-11"
+        ixz="3.99761328731738E-11"
+        iyy="7.3461294955047E-06"
+        iyz="1.13726416792926E-08"
+        izz="7.34127784785196E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadURDF/meshes/prop_link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.67843137254902 0.67843137254902 0.729411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadURDF/meshes/prop_link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop_joint_4"
+    type="fixed">
+    <origin
+      xyz="-0.00010094395060628 -0.0368000906666004 -0.000194710459263326"
+      rpy="-3.14159265358979 0.471058413408255 0" />
+    <parent
+      link="wrist_link_4" />
+    <child
+      link="prop_link_4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
